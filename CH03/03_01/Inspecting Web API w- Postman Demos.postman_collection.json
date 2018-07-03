@@ -1,0 +1,156 @@
+{
+	"info": {
+		"name": "Inspecting Web API w/ Postman Demos",
+		"_postman_id": "90e2310a-87bc-48b3-8658-b6959c15a508",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Product MWBLU20",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:63058/api/Products/MWBLU20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63058",
+					"path": [
+						"api",
+						"Products",
+						"MWBLU20"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Post Customer",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Chris\",\r\n\"lastName\": \"Woodruff\",\r\n\"email\": \"cwoodruff@live.com\",\r\n\"phone\": \"YOUR_PHONE_HERE\",\r\n\"address\": \"1234 PLANET STREET\",\r\n\"city\": \"ATLANTIS\",\r\n\"state\": \"XANADU\",\r\n\"zipcode\": \"12345\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63058/api/Customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63058",
+					"path": [
+						"api",
+						"Customers"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Post Customer with firstName error",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"firstName\": \"Chrisxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\",\r\n\"lastName\": \"Woodruff\",\r\n\"email\": \"cwoodruff@live.com\",\r\n\"phone\": \"1234\",\r\n\"address\": \"1234 PLANET STREET\",\r\n\"city\": \"ATLANTIS\",\r\n\"state\": \"XANADU\",\r\n\"zipcode\": \"12345\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63058/api/Customers",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63058",
+					"path": [
+						"api",
+						"Customers"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Update Product with a PUT",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{ \r\n\"productId\": \"MWBLU20\",\r\n\"productName\": \"Mineral Water\",\r\n\"size\": 20,\r\n\"variety\": \"Blueberry\",\r\n\"price\": 1.99,\r\n\"status\": \"ACTIVE\"\r\n}"
+				},
+				"url": {
+					"raw": "http://localhost:63058/api/Products/MWBLU20",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63058",
+					"path": [
+						"api",
+						"Products",
+						"MWBLU20"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a product Copy",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "http://localhost:63058/api/Products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "63058",
+					"path": [
+						"api",
+						"Products"
+					]
+				},
+				"description": null
+			},
+			"response": []
+		}
+	]
+}
